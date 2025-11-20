@@ -1,1 +1,4 @@
 ignoreWorkspaceRootCheck: true
+
+patchedDependencies:
+  prosemirror-view: patches/prosemirror-view.patch

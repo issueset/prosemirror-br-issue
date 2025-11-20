@@ -1,0 +1,13 @@
+diff --git a/dist/index.js b/dist/index.js
+index 08aa138d630f9e40e6f314ab54f35a0f81fd3e3a..2250e3c61a1df2cd332be6171ed85186b04bfa14 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -4864,6 +4864,8 @@ function blockParent(view, node) {
+ // readDOMChange.
+ function parseBetween(view, from_, to_) {
+     let { node: parent, fromOffset, toOffset, from, to } = view.docView.parseRange(from_, to_);
++    console.warn(`[prosemirror-view] view.docView.parseRange(${from_}, ${to_}) =>`, JSON.stringify({ node: parent.outerHTML, fromOffset, toOffset, from, to }, null, 4));
++
+     let domSel = view.domSelectionRange();
+     let find;
+     let anchor = domSel.anchorNode;
